@@ -14,7 +14,7 @@ class Product {
 }
 
 relation ShoppingLists {
-    .pt.ist.bennu.core.domain.VirtualHost playsRole host {
+    .pt.ist.bennu.core.domain.Bennu playsRole bennu {
         multiplicity 1..1;
     }
     ShoppingList playsRole shoppingList {
@@ -32,7 +32,7 @@ relation ShoppingListItems {
 }
 
 relation ShoppingProducts {
-    .pt.ist.bennu.core.domain.VirtualHost playsRole host {
+    .pt.ist.bennu.core.domain.Bennu playsRole bennu {
         multiplicity 1..1;
     }
     Product playsRole product {

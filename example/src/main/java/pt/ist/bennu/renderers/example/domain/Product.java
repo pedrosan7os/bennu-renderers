@@ -2,14 +2,14 @@ package pt.ist.bennu.renderers.example.domain;
 
 import java.util.TreeSet;
 
-import pt.ist.bennu.core.domain.VirtualHost;
+import pt.ist.bennu.core.domain.Bennu;
 import pt.ist.fenixframework.Atomic;
 
 public class Product extends Product_Base implements Comparable<Product> {
 
     public Product() {
         super();
-        setHost(VirtualHost.getVirtualHostForThread());
+        setBennu(Bennu.getInstance());
     }
 
     public Product(String name) {
@@ -18,10 +18,10 @@ public class Product extends Product_Base implements Comparable<Product> {
     }
 
     public static TreeSet<Product> getPossibleProducts() {
-        if (VirtualHost.getVirtualHostForThread().getProductSet().isEmpty()) {
+        if (Bennu.getInstance().getProductSet().isEmpty()) {
             initProducts();
         }
-        return new TreeSet<>(VirtualHost.getVirtualHostForThread().getProductSet());
+        return new TreeSet<>(Bennu.getInstance().getProductSet());
     }
 
     @Atomic

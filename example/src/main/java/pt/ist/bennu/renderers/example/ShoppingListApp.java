@@ -7,7 +7,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import pt.ist.bennu.core.domain.VirtualHost;
+import pt.ist.bennu.core.domain.Bennu;
 import pt.ist.bennu.core.presentationTier.actions.ContextBaseAction;
 import pt.ist.bennu.portal.Application;
 import pt.ist.bennu.portal.Functionality;
@@ -24,7 +24,7 @@ public class ShoppingListApp extends ContextBaseAction {
     @Functionality(app = ShoppingListApp.class, path = "list", bundle = "resources.ExampleResources",
             description = "title.example.shoppinglist.list.description", title = "title.example.shoppinglist.list")
     public ActionForward list(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
-        request.setAttribute("list", VirtualHost.getVirtualHostForThread().getShoppingListSet());
+        request.setAttribute("list", Bennu.getInstance().getShoppingListSet());
         return forward(request, "/example/shoppinglist.jsp");
     }
 
