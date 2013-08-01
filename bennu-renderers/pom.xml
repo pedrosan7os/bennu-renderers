@@ -26,6 +26,11 @@
         </dependency>
         <dependency>
             <groupId>pt.ist.bennu</groupId>
+            <artifactId>bennu-legacy</artifactId>
+            <version>${version.pt.ist.bennu.bennu}</version>
+        </dependency>
+        <dependency>
+            <groupId>pt.ist.bennu</groupId>
             <artifactId>bennu-portal</artifactId>
             <version>${version.pt.ist.bennu.bennu}</version>
         </dependency>

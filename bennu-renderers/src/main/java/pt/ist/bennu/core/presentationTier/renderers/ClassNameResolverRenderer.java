@@ -27,7 +27,7 @@ package pt.ist.bennu.core.presentationTier.renderers;
 import org.apache.commons.lang.StringUtils;
 
 import pt.ist.bennu.core.i18n.BundleUtil;
-import pt.ist.bennu.core.util.ClassNameBundle;
+import pt.ist.bennu.core.util.legacy.ClassNameBundle;
 import pt.ist.fenixWebFramework.renderers.OutputRenderer;
 import pt.ist.fenixWebFramework.renderers.components.HtmlComponent;
 import pt.ist.fenixWebFramework.renderers.components.HtmlText;
