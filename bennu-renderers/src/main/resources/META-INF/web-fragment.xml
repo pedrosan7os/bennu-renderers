@@ -11,6 +11,12 @@
             <encoding>UTF-8</encoding>
         </locale-encoding-mapping>
     </locale-encoding-mapping-list>
+    
+    <ordering>
+        <after>
+            <name>bennu-core</name>
+        </after>
+    </ordering>
 
     <filter>
         <filter-name>MultipartFilter</filter-name>
